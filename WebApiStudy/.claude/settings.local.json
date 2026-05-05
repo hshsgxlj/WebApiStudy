@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dotnet build *)",
+      "Bash(rm -rf \"C:/Users/hshsgxlj/Desktop/.NETWeb/.git\")",
+      "Bash(mv \"C:/Users/hshsgxlj/Desktop/.NETWeb/WebApiStudy/.git\" \"C:/Users/hshsgxlj/Desktop/.NETWeb/.git\")",
+      "Bash(cp \"C:/Users/hshsgxlj/Desktop/.NETWeb/WebApiStudy/.gitignore\" \"C:/Users/hshsgxlj/Desktop/.NETWeb/.gitignore\")",
+      "Bash(cp \"C:/Users/hshsgxlj/Desktop/.NETWeb/WebApiStudy/.gitattributes\" \"C:/Users/hshsgxlj/Desktop/.NETWeb/.gitattributes\")"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "ida-pro-mcp",
+    "burp",
+    "fetch",
+    "playwright",
+    "rs0n-bug-bounty",
+    "crtsh",
+    "http-headers-security",
+    "ffuf",
+    "amass",
+    "arjun",
+    "smuggler",
+    "nuclei",
+    "sqlmap",
+    "nmap",
+    "katana",
+    "httpx",
+    "assetfinder",
+    "waybackurls",
+    "alterx",
+    "shuffledns",
+    "wpscan",
+    "scoutsuite",
+    "mobsf"
+  ]
+}
