@@ -9,7 +9,7 @@ namespace WebApiStudy.Models.Validations
             var shirt = validationContext.ObjectInstance as Shirt;
             if(shirt!=null)
             {
-                if(shirt.Gender.Equals("men",StringComparison.OrdinalIgnoreCase)&&shirt.Size<8) 
+                if(string.Equals(shirt.Gender, "men", StringComparison.OrdinalIgnoreCase) && shirt.Size < 8)
                 {
                     return new ValidationResult("For men's Shirt,the size should has to be greater or equal to 8");
                 }

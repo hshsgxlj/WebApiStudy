@@ -12,6 +12,7 @@ type: project
 ## 技术栈
 - .NET (C#)
 - ASP.NET Core Web API
+- SQL Server 2025 Enterprise Developer Edition（免费，开发/测试用）
 
 ## 项目结构
 - `Controllers/` — API 控制器
