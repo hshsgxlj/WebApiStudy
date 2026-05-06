@@ -41,6 +41,7 @@ namespace WebApiStudy.Controllers
         [TypeFilter(typeof(Shirt_HandleUpdateExceptionsFilierAttribute))]
         public IActionResult UpdateShirt(int id, Shirt shirt)
         {
+            shirt.ShirtId = id;
             db.Shirts.Update(shirt);
             db.SaveChanges();
             return NoContent();

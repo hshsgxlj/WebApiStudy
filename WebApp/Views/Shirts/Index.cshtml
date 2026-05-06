@@ -1,4 +1,4 @@
-﻿@model List<Shirt>
+@model List<Shirt>
 <h3>Shirt</h3>
 <br/>
 <table class="table table-striped">
@@ -9,6 +9,7 @@
 			<td>Color</td>
 			<td>Size</td>
 			<td>Price</td>
+			<td></td>
 		</tr>
 	</thead>
 	<tbody>
@@ -20,6 +21,12 @@
 				<td>@shirt.Color</td>
 				<td>@shirt.Size</td>
 				<td>@(shirt.Price)</td>
+				<td>
+					<a class="btn btn-warning btn-sm"
+					   asp-controller="Shirts"
+					   asp-action="UpdateShirt"
+					   asp-route-shirtId="@shirt.ShirtId">Edit</a>
+				</td>
 			</tr>
 		}
 	</tbody>
