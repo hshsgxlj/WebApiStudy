@@ -4,7 +4,7 @@
 <br/>
 
 <form asp-controller="Shirts" asp-action="CreateShirt" method="post">
-    <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+    <div class="text-danger" asp-validation-summary="All"></div>
     <div class="mb-3">
         <label asp-for="Brand" class="form-label"></label>
         <input asp-for="Brand" class="form-control" />

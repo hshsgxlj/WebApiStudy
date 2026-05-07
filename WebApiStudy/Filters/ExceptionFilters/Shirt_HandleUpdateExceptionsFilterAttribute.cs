@@ -2,13 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using WebApiStudy.Data;
 
-namespace WebApiStudy.Filters.ExceptinFiliters
+namespace WebApiStudy.Filters.ExceptionFilters
 {
-    public class Shirt_HandleUpdateExceptionsFilierAttribute : ExceptionFilterAttribute
+    public class Shirt_HandleUpdateExceptionsFilterAttribute : ExceptionFilterAttribute
     {
         private readonly ApplicationDbContext db;
 
-        public Shirt_HandleUpdateExceptionsFilierAttribute(ApplicationDbContext db)
+        public Shirt_HandleUpdateExceptionsFilterAttribute(ApplicationDbContext db)
         {
             this.db = db;
         }

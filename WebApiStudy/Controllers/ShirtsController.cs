@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebApiStudy.Data;
-using WebApiStudy.Filters.ActionFiliters;
-using WebApiStudy.Filters.ExceptinFiliters;
+using WebApiStudy.Filters.ActionFilters;
+using WebApiStudy.Filters.ExceptionFilters;
 using WebApiStudy.Models;
 
 namespace WebApiStudy.Controllers
@@ -21,13 +21,13 @@ namespace WebApiStudy.Controllers
             return Ok(db.Shirts.ToList());
         }
         [HttpGet("{id}")]
-        [TypeFilter(typeof(Shirt_ValidateShirtIdFiliterAttribute))]
+        [TypeFilter(typeof(Shirt_ValidateShirtIdFilterAttribute))]
         public IActionResult GetShirtById(int id)
         {
             return Ok(db.Shirts.Find(id));
         }
         [HttpPost]
-        [TypeFilter(typeof(Shirt_ValidateCreateShirtFiliterAttribute))]
+        [TypeFilter(typeof(Shirt_ValidateCreateShirtFilterAttribute))]
         public IActionResult CreateShirt([FromBody]Shirt shirt)
         {
 
@@ -36,9 +36,9 @@ namespace WebApiStudy.Controllers
             return CreatedAtAction(nameof(GetShirtById),new { id = shirt.ShirtId },shirt);
         }
         [HttpPut("{id}")]
-        [TypeFilter(typeof(Shirt_ValidateShirtIdFiliterAttribute))]
-        [TypeFilter(typeof(Shirt_VaildateUpdateShirtFiliterAttribute))]
-        [TypeFilter(typeof(Shirt_HandleUpdateExceptionsFilierAttribute))]
+        [TypeFilter(typeof(Shirt_ValidateShirtIdFilterAttribute))]
+        [TypeFilter(typeof(Shirt_ValidateUpdateShirtFilterAttribute))]
+        [TypeFilter(typeof(Shirt_HandleUpdateExceptionsFilterAttribute))]
         public IActionResult UpdateShirt(int id, Shirt shirt)
         {
             shirt.ShirtId = id;
@@ -47,7 +47,7 @@ namespace WebApiStudy.Controllers
             return NoContent();
         }
         [HttpDelete("{id}")]
-        [TypeFilter(typeof(Shirt_ValidateShirtIdFiliterAttribute))]
+        [TypeFilter(typeof(Shirt_ValidateShirtIdFilterAttribute))]
         public IActionResult DeleteShirt(int id)
         {
             var shirt = db.Shirts.Find(id);

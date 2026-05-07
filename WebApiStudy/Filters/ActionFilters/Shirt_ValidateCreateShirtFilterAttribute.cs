@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using WebApiStudy.Data;
 using WebApiStudy.Models;
 
-namespace WebApiStudy.Filters.ActionFiliters
+namespace WebApiStudy.Filters.ActionFilters
 {
-    public class Shirt_ValidateCreateShirtFiliterAttribute : ActionFilterAttribute
+    public class Shirt_ValidateCreateShirtFilterAttribute : ActionFilterAttribute
     {
         private readonly ApplicationDbContext db;
-        public Shirt_ValidateCreateShirtFiliterAttribute(ApplicationDbContext db)
+        public Shirt_ValidateCreateShirtFilterAttribute(ApplicationDbContext db)
         {
             this.db = db;
         }

@@ -1,15 +1,14 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using WebApiStudy.Data;
 using WebApiStudy.Models;
 
-namespace WebApiStudy.Filters.ActionFiliters
+namespace WebApiStudy.Filters.ActionFilters
 {
-    public class Shirt_VaildateUpdateShirtFiliterAttribute:ActionFilterAttribute
+    public class Shirt_ValidateUpdateShirtFilterAttribute : ActionFilterAttribute
     {
         private readonly ApplicationDbContext db;
-        public Shirt_VaildateUpdateShirtFiliterAttribute(ApplicationDbContext db)
+        public Shirt_ValidateUpdateShirtFilterAttribute(ApplicationDbContext db)
         {
             this.db = db;
         }
@@ -38,7 +37,7 @@ namespace WebApiStudy.Filters.ActionFiliters
             var existingShirt = db.Shirts.Find(shirtId.Value);
             if (existingShirt == null)
             {
-                context.ModelState.AddModelError("shirt", "Shirt dont exist");
+                context.ModelState.AddModelError("shirt", "Shirt don't exist");
                 var problemDetail = new ValidationProblemDetails(context.ModelState)
                 {
                     Status = StatusCodes.Status404NotFound

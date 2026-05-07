@@ -9,7 +9,7 @@ namespace WebApp.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ShirtId { get; set; }
         [Required]
-        public string? Brand { set; get; }
+        public string? Brand { get; set; }
         [Required]
         public string? Color { get; set; }
         [Shirt_EnsureCorrect]

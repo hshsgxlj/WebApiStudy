@@ -1,5 +1,6 @@
 @model List<Shirt>
 <h3>Shirt</h3>
+<div class="text-danger" asp-validation-summary="All"></div>
 <br/>
 <table class="table table-striped">
 	<thead>
@@ -26,6 +27,10 @@
 					   asp-controller="Shirts"
 					   asp-action="UpdateShirt"
 					   asp-route-shirtId="@shirt.ShirtId">Edit</a>
+					<form asp-action="DeleteShirt" method="post" style="display:inline">
+						<input type="hidden" name="shirtId" value="@shirt.ShirtId" />
+						<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+					</form>
 				</td>
 			</tr>
 		}

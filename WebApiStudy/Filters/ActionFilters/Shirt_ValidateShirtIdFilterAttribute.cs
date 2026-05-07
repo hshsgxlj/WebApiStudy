@@ -2,13 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using WebApiStudy.Data;
 
-namespace WebApiStudy.Filters.ActionFiliters
+namespace WebApiStudy.Filters.ActionFilters
 {
-    public class Shirt_ValidateShirtIdFiliterAttribute : ActionFilterAttribute
+    public class Shirt_ValidateShirtIdFilterAttribute : ActionFilterAttribute
     {
         private readonly ApplicationDbContext db;
 
-        public Shirt_ValidateShirtIdFiliterAttribute(ApplicationDbContext db)
+        public Shirt_ValidateShirtIdFilterAttribute(ApplicationDbContext db)
         {
             this.db = db;
         }
